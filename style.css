@@ -1,11 +1,18 @@
+@font-face {
+    font-family: 'GeneralSans';
+    src: url('GeneralSans-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "GeneralSans";
 }
 
 html,body {
-    font-family: "General Sans";
     height: 100%;
     width: 100%;
 }
