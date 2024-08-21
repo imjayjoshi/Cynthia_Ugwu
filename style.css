@@ -316,26 +316,9 @@ html,body {
 }
 
 #footer a{
-    position: relative;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 500;
     color: #fff;
     text-decoration: none;
-}
-
-#footer a::after{
-    content: "";
-    margin-top: 5px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 1px;
-    width: 0;
-    background-color: #fff;
-    transition: all ease .3s;
-}
-
-#footer a:hover::after{
-    width: 100%;
 }
