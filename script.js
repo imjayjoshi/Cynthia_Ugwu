@@ -5,26 +5,6 @@ const scroll = new LocomotiveScroll({
 
 var timeout;
 
-function DateTime() {
-  let now = new Date();
-
-  let yr = now.getFullYear();
-  let hrs = now.getHours();
-  let min = now.getMinutes();
-  let ampm = hrs >= 12 ? 'PM' : 'AM';
-
-  hrs = hrs % 12;
-  hrs = hrs ? hrs : 12;
-  min = min < 10 ? '0' + min : min;
-
-  document.querySelector('#hr').textContent = hrs;
-  document.querySelector('#min').textContent = min;
-  document.querySelector('#dur').textContent = ampm;
-  document.querySelector("#year").textContent = yr;
-
-  setTimeout(DateTime, 1000);
-}
-
 function FirstPageAnim() {
   var tl = gsap.timeline();
 
@@ -111,6 +91,26 @@ function ImageScroll() {
       });
     });
   });
+}
+
+function DateTime() {
+  let now = new Date();
+
+  let yr = now.getFullYear();
+  let hrs = now.getHours();
+  let min = now.getMinutes();
+  let ampm = hrs >= 12 ? 'PM' : 'AM';
+
+  hrs = hrs % 12;
+  hrs = hrs ? hrs : 12;
+  min = min < 10 ? '0' + min : min;
+
+  document.querySelector('#hr').textContent = hrs;
+  document.querySelector('#min').textContent = min;
+  document.querySelector('#dur').textContent = ampm;
+  document.querySelector("#year").textContent = yr;
+
+  setTimeout(DateTime, 1000);
 }
 
 CircleOblate();
