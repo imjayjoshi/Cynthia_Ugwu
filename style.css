@@ -296,26 +296,26 @@ html,body {
     width: 21%;
 }
 
-#footer{
-    background-color: black;
+#footer {
     color: #fff;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 40px 30px;
 }
 
-#footerleft{
+#footerleft {
     display: flex;
     gap: 20px;
 }
 
-#footerright{
+#footerright {
     display: flex;
     gap: 30px;
 }
 
-#footer a{
+#footer a {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 500;
