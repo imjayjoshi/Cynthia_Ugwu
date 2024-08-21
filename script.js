@@ -109,8 +109,6 @@ function DateTime() {
   document.querySelector('#min').textContent = min;
   document.querySelector('#dur').textContent = ampm;
   document.querySelector("#year").textContent = yr;
-
-  setTimeout(DateTime, 1000);
 }
 
 CircleOblate();
