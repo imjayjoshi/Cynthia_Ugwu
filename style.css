@@ -317,10 +317,11 @@ html,body {
 
 #footer a{
     position: relative;
-    color: #fff;
-    text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
 }
 
 #footer a::after{
