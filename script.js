@@ -111,8 +111,8 @@ function DateTime() {
   document.querySelector("#year").textContent = yr;
 }
 
+DateTime();
 CircleOblate();
 FirstPageAnim();
 CircleMouseFollower();
 ImageScroll();
-DateTime();
