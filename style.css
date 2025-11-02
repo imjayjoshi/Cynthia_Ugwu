@@ -9,12 +9,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "GeneralSans";
+    font-family: "GeneralSans", sans-serif;
 }
 
 html,body {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 #minicircle{
@@ -25,6 +26,7 @@ html,body {
     z-index: 99999;
     background-color: #fff;
     border-radius: 50%;
+    pointer-events: none;
 }
 
 .bounding{
@@ -45,6 +47,7 @@ html,body {
     position: relative;
     width: 100%;
     height: 100vh;
+    min-height: 600px;
     background-color: black;
     color: #fff;
 }
@@ -66,6 +69,7 @@ html,body {
 
 #nav h4{
     position: relative;
+    cursor: pointer;
 }
 
 #nav h4::after{
@@ -129,7 +133,6 @@ html,body {
     font-size: 1vw;
 }
 
-
 #homefooter {
     padding: 0 2vw;
     width: 100%;
@@ -145,6 +148,7 @@ html,body {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
+    font-size: 14px;
 }
 
 #homefooter a::after{
@@ -186,7 +190,6 @@ html,body {
     width: 100%;
 }
 
-
 .elem{
     position: relative;
     display: flex;
@@ -202,6 +205,10 @@ html,body {
     text-transform: uppercase;
     font-size: 7.6vw;
     opacity: .7;
+}
+
+.elem h5{
+    font-size: 14px;
 }
 
 .elemlast{
@@ -230,6 +237,7 @@ html,body {
 
 #text{
     width: 25rem;
+    max-width: 100%;
 }
 
 #text h5{
@@ -245,9 +253,11 @@ html,body {
 
 #about img{
     width: 200px;
+    height: auto;
 }
 
 #text a{
+    display: inline-block;
     padding: 12px 24px;
     border: 1px solid #fff;
     border-radius: 100px;
@@ -278,6 +288,7 @@ html,body {
     position: relative;
     font-size: 14px;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 #subscribe h3::after{
@@ -321,4 +332,294 @@ html,body {
     font-weight: 500;
     color: #fff;
     text-decoration: none;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablets and smaller laptops (768px - 1024px) */
+@media (max-width: 1024px) {
+    #nav {
+        padding: 20px 30px;
+    }
+    
+    #nav a {
+        font-size: 16px;
+    }
+    
+    #heading {
+        margin-top: 70px;
+    }
+    
+    #heading h1 {
+        font-size: 11vw;
+        margin-left: 20px;
+    }
+    
+    #heading #secondh1 {
+        margin-left: 150px;
+    }
+    
+    #smallheading {
+        margin-top: 80px;
+        padding-right: 20px;
+    }
+    
+    #smallheading h5 {
+        font-size: 1.5vw;
+    }
+    
+    #blog {
+        padding-right: 5vw;
+        padding-top: 150px;
+    }
+    
+    #about {
+        padding: 10vw 5vw;
+        padding-left: 20vw;
+        gap: 30px;
+    }
+    
+    #about img {
+        width: 150px;
+    }
+}
+
+/* Mobile devices (max-width: 767px) */
+@media (max-width: 767px) {
+    #minicircle {
+        display: none;
+    }
+    
+    #nav {
+        padding: 15px 20px;
+    }
+    
+    #nav a {
+        font-size: 14px;
+    }
+    
+    #nav h4 {
+        font-size: 14px;
+    }
+    
+    #heading {
+        margin-top: 50px;
+    }
+    
+    #heading h1 {
+        font-size: 15vw;
+        margin-left: 15px;
+    }
+    
+    #heading #secondh1 {
+        margin-left: 60px;
+    }
+    
+    .blocktext h5 {
+        font-size: 12px;
+    }
+    
+    #smallheading {
+        margin-top: 60px;
+        padding-right: 15px;
+    }
+    
+    #smallheading h5 {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+    
+    #homefooter {
+        flex-direction: column;
+        gap: 15px;
+        bottom: 2%;
+        padding: 0 20px;
+        align-items: flex-start;
+    }
+    
+    #homefooter a {
+        font-size: 11px;
+    }
+    
+    #homefooter #iconset {
+        align-self: flex-start;
+    }
+    
+    #blog {
+        padding-right: 0;
+        padding-top: 100px;
+    }
+    
+    .elem {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5vw 4vw;
+        gap: 10px;
+    }
+    
+    .elem h1 {
+        font-size: 12vw;
+    }
+    
+    .elem h5 {
+        font-size: 12px;
+    }
+    
+    .elem img {
+        display: none;
+    }
+    
+    #about {
+        flex-direction: column;
+        padding: 15vw 5vw;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    #about img {
+        width: 120px;
+        order: -1;
+    }
+    
+    #text {
+        width: 100%;
+    }
+    
+    #text h5 {
+        text-align: center;
+    }
+    
+    #text p {
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    #text a {
+        display: block;
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    
+    #subscribe {
+        padding: 20px 20px;
+        padding-bottom: 15vw;
+    }
+    
+    #subscribe h5 {
+        font-size: 12px;
+    }
+    
+    #subscribe h3 {
+        font-size: 12px;
+    }
+    
+    #subscribe h3:hover::after {
+        width: 50%;
+    }
+    
+    #footer {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    
+    #footerleft {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 12px;
+    }
+    
+    #footerright {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    #footer a {
+        font-size: 12px;
+    }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    #home {
+        min-height: 500px;
+    }
+    
+    #nav {
+        padding: 12px 15px;
+    }
+    
+    #heading h1 {
+        font-size: 16vw;
+        margin-left: 10px;
+    }
+    
+    #heading #secondh1 {
+        margin-left: 40px;
+    }
+    
+    #smallheading {
+        margin-top: 40px;
+    }
+    
+    #homefooter {
+        bottom: 1%;
+    }
+    
+    .elem h1 {
+        font-size: 14vw;
+    }
+    
+    #about {
+        padding: 20vw 5vw;
+    }
+    
+    #text p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+}
+
+/* Large screens (min-width: 1920px) */
+@media (min-width: 1920px) {
+    #nav {
+        padding: 30px 60px;
+    }
+    
+    #nav a {
+        font-size: 20px;
+    }
+    
+    #heading {
+        margin-top: 120px;
+    }
+    
+    #smallheading h5 {
+        font-size: 18px;
+    }
+    
+    .blocktext h5 {
+        font-size: 18px;
+    }
+    
+    #homefooter a {
+        font-size: 16px;
+    }
+    
+    #about img {
+        width: 250px;
+    }
+    
+    #text {
+        width: 30rem;
+    }
+    
+    #text p {
+        font-size: 16px;
+    }
 }
